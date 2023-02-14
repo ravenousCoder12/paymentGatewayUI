@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Payment form</title>
+</head>
+<body>
+    <div class="container">
+    <form  action="navi_page.html" method="POST">
+        <!-- <fieldset> -->
+        <h1 class="pay_form">Payment Form</h1>
+        
+        <hr>
+
+        <header class="header1">
+            <nav>
+                <a class="home_1" href="index.html" target="_blank">Home</a>
+            </nav>
+
+            <div>
+                <div class="dropdown">
+                    <button class="drop">Accounts
+                        <i class="fa fa-caret-down"></i> 
+                    </button>
+
+                      <div class="drop-content">
+                        <a href="https://accounts.google.com/v3/signin/identifier?dsh=S-1626914761%3A1675527005579740&authuser=0&continue=https%3A%2F%2Fmail.google.com&ec=GAlAFw&hl=en&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession">Gmail</a>
+                        <a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=638111239458308738.MzBmNjJhN2MtYjEzOC00M2I3LTg5OTQtNjQ3ZTNmNjE2NGExOTAwMTEwMzUtNThlMy00OGE5LThhMjUtMTc3N2QzNjAyYWQw&ui_locales=en-GB&mkt=en-GB&client-request-id=d53ccf29-5155-4b6d-8fc5-d2496e465acd&state=_3v6ovHqcr1zyC0LfddS9jABVHGIMc04WvE6p1b3ncB1O9pvUHTUCwEajzFUvuBIkkMB_oKFpJM3qhLaezOm8HYCnKZlvU49XYgA12X5FXWpnUiXr7j4ZWB05lBJHUWM_PtZH5c7VHXqZH-BiaiwoojuR3ntmEFNjfIcjVOKiKJgRYPVOHQgAavWOB82XveuRwAMu6XxH9-MMNKHgBQF4E-LMIFC57ivgA4TltZ_5pDh_deGP3iNWbpJuku-nT4NrVkfqYbzMr6wGjBTtw0VjrkWDQL65sLM-p9ie6fxm7Q&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.16.0.0">Microsoft</a>
+                        <a href="https://www.dropbox.com/login">Drop Box</a>
+                      </div>
+                </div>      
+            </div>
+
+            <nav>
+                <a class="records" href="C:\Users\jaisw\OneDrive\Desktop\records.html" target="blank">Records</a>
+            </nav>
+
+        </header>
+
+        <hr>
+        <br>
+
+        <h2 class="h2_1">
+            Contact Information 
+        </h2>
+
+        <br>
+
+        <p> (*) means mandatory</p>
+        <br>
+
+        <fieldset>
+        <legend>Name</legend>
+        <p>First Name : * <input type="text" name="first name" placeholder="eg : Vaibhav"  > </p>
+        <p>Last Name  : * <input type="text" name="last name" placeholder="eg : Jaiswal"   > </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Gender</legend>
+            <p>Male <input type="radio" name="gender" id="male"></p>
+            <p>Female <input type="radio" name="gender" id="female"></p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Address</legend>
+            <p><textarea name="address" id="address" cols="50" rows="5" placeholder="Enter your address" ></textarea></p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>E-mail</legend>
+            <p> * <input type="email" name="email" id="email" placeholder="eg : xyz@gmail.com"  ></p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>
+                Pincode
+            </legend>
+            <p> * <input type="number" name="pincode" id="pincode"  ></p>
+        </fieldset>
+
+        <br>
+        <br>
+
+
+                <h2 class="h2_2">Payment Information</h2>
+                <br>
+
+            <fieldset>
+                <legend>Card Type</legend>
+                <!-- <p>Mastercard<input type="radio" name="card" id="mc"></p>
+                <p>Rupay Card<input type="radio" name="card" id="rc"></p>
+                <p>Debit Card<input type="radio" name="card" id="dc"></p>   (TRIVIAL METHOD) -->
+                
+                <p> * 
+                    <select name="card_type" id="card_type"  >
+                     <option value="">--Select A Card Type--</option>
+                     <option value="Mastercard">Mastercard</option>
+                     <option value="Rupay">Rupay</option>
+                     <option value="Visa">Visa</option>
+                    </select>
+                </p>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>
+                    Card Number
+                </legend>
+                <p> * <input type="number" name="card_number" id="card_number" placeholder="**** **** **** ****" ></p>
+            </fieldset>
+
+            <br>
+
+            <fieldset >
+                <legend >
+                    Card Expiration Date
+                </legend>
+                <p> * 
+                    <input type="date" name="exp_date" id="exp_date"  >
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>
+                    Card CVV
+                </legend>
+                * <input type="password" name="cvv" id="cvv" placeholder="eg : 123" >
+            </fieldset>
+
+            <br>
+            <br>
+            <br>
+
+
+            
+<!-- <input type="submit" value="PAY NOW" width="500"></a> -->
+<button class="butt1">
+<a href="navi_page.html" type="blank">Pay Now</a>
+</button>
+            <!-- </fieldset> -->
+    </form>
+</div>
+    
+</body>
+</html>
